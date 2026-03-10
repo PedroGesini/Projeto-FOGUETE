@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>Trabalho FIAP FOGUETE.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #2aacb8;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Trabalho FIAP FOGUETE.py</font>
+</center></td></tr></table>
+<pre><span class="s0">#Inicio do Trabalho</span>
+<span class="s2">from </span><span class="s1">random </span><span class="s2">import </span><span class="s1">Random</span>
+
+<span class="s0">#Definir objetivo do trabalho</span>
+<span class="s0">#&quot;O objetivo desta operação é realizar o lançamento do foguete de forma segura para todos os tripulantes,\npor meio da análise dos diferentes parâmetros e status operacionais do sistema da nave. Essa verificação\ninclui a avaliação de fatores como temperatura interna e externa, integridade estrutural, níveis de energia,\npressão dos tanques e funcionamento dos módulos críticos, garantindo que todas as condições estejam dentro\ndos limites seguros estabelecidos antes da autorização do lançamento.\n\n&quot;)</span>
+  <span class="s0">#  determinando as variaves como 0 para depois deixar elas randomizadas:</span>
+<span class="s1">temperatura_interna </span><span class="s3">= </span><span class="s4">0</span>
+<span class="s1">temperatura_externa </span><span class="s3">= </span><span class="s4">0</span>
+<span class="s1">integridade_estrutural </span><span class="s3">= </span><span class="s4">0</span>
+<span class="s1">energia </span><span class="s3">= </span><span class="s4">0</span>
+<span class="s1">pressao_tanque </span><span class="s3">= </span><span class="s4">0</span>
+<span class="s1">modulos_criticos </span><span class="s3">= </span><span class="s4">0</span>
+
+
+
+
+<span class="s0">#importando uma biblioteca (random) que basicamente traz numeros aleatorios</span>
+<span class="s2">import </span><span class="s1">random</span>
+
+
+<span class="s0">#colocando a biblioteca random com o codigo 'randint' para deixar uma randomizaçao de numeros inteiros:</span>
+
+<span class="s1">temperatura_interna </span><span class="s3">= </span><span class="s1">random</span><span class="s3">.</span><span class="s1">randint</span><span class="s3">(</span><span class="s4">10</span><span class="s3">,</span><span class="s4">30</span><span class="s3">)</span>
+<span class="s1">temperatura_externa </span><span class="s3">= </span><span class="s1">random</span><span class="s3">.</span><span class="s1">randint</span><span class="s3">(-</span><span class="s4">20</span><span class="s3">,</span><span class="s4">35</span><span class="s3">)</span>
+<span class="s1">energia </span><span class="s3">= </span><span class="s1">random</span><span class="s3">.</span><span class="s1">randint</span><span class="s3">(</span><span class="s4">50</span><span class="s3">, </span><span class="s4">100</span><span class="s3">)</span>
+<span class="s1">pressao_tanque </span><span class="s3">= </span><span class="s1">random</span><span class="s3">.</span><span class="s1">randint</span><span class="s3">(</span><span class="s4">20</span><span class="s3">,</span><span class="s4">60</span><span class="s3">)</span>
+<span class="s1">integridade_estrutural </span><span class="s3">= </span><span class="s1">random</span><span class="s3">.</span><span class="s1">randint</span><span class="s3">(</span><span class="s4">0</span><span class="s3">,</span><span class="s4">1</span><span class="s3">)</span>
+<span class="s1">modulos_criticos </span><span class="s3">= </span><span class="s1">random</span><span class="s3">.</span><span class="s1">randint</span><span class="s3">(</span><span class="s4">0</span><span class="s3">,</span><span class="s4">1</span><span class="s3">)</span>
+
+<span class="s0">#declarando as variaveis da Margem para calcular o quanto de margem foi passado ou quanto falta para atingir o minimo necessario para o lançamento</span>
+
+<span class="s1">temperatura_interm </span><span class="s3">= </span><span class="s4">0</span>
+<span class="s1">temperatura_externam </span><span class="s3">= </span><span class="s4">0</span>
+<span class="s1">energiam </span><span class="s3">= </span><span class="s4">0</span>
+<span class="s1">pressao_tanquem </span><span class="s3">= </span><span class="s4">0</span>
+<span class="s1">integridade_estruturalm </span><span class="s3">= </span><span class="s4">0</span>
+<span class="s1">modulos_criticosm </span><span class="s3">= </span><span class="s4">0</span>
+
+
+<span class="s0">#calculo da margem</span>
+
+<span class="s1">temperatura_interm </span><span class="s3">=  </span><span class="s1">temperatura_interm </span><span class="s3">- </span><span class="s1">temperatura_interna</span>
+<span class="s1">temperatura_externam </span><span class="s3">= </span><span class="s1">temperatura_externam </span><span class="s3">- </span><span class="s1">temperatura_externa</span>
+<span class="s1">energiam </span><span class="s3">= </span><span class="s1">energiam </span><span class="s3">- </span><span class="s1">energia</span>
+<span class="s1">pressao_tanquem </span><span class="s3">= </span><span class="s1">pressao_tanquem </span><span class="s3">- </span><span class="s1">pressao_tanque</span>
+<span class="s1">integridade_estruturalm </span><span class="s3">= </span><span class="s1">integridade_estruturalm </span><span class="s3">- </span><span class="s1">integridade_estrutural</span>
+<span class="s1">modulos_criticosm </span><span class="s3">= </span><span class="s1">modulos_criticosm </span><span class="s3">- </span><span class="s1">modulos_criticos</span>
+
+
+<span class="s0">#esta parte do codigo a seguir verifica se o fogue esta pronto para decolagem se estiver com 1 pode decolar,</span>
+<span class="s0">#se estiver com 0 nao esta apto para decolagem.</span>
+
+
+
+<span class="s0">#esta parte do codigo mostra os parametros que a nave tem no momento de forma aleatoria!</span>
+<span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;verificando statos da nave...</span><span class="s2">\n</span><span class="s5">&quot;</span><span class="s3">)</span>
+
+<span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;</span><span class="s2">\n</span><span class="s5">------------------ TELEMETRIA E ANÁLISE DO FOGUETE ------------------</span><span class="s2">\n</span><span class="s5">&quot;</span><span class="s3">)</span>
+
+<span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;| Parâmetro                         | Status Atual | Status Mínimo | Margem |&quot;</span><span class="s3">)</span>
+<span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;|-----------------------------------|--------------|---------------|--------|&quot;</span><span class="s3">)</span>
+
+<span class="s1">print</span><span class="s3">(</span><span class="s5">f&quot;| Temperatura interna da nave       | </span><span class="s2">{</span><span class="s1">temperatura_interna</span><span class="s2">:</span><span class="s5">^12</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s5">'10°C'</span><span class="s2">:</span><span class="s5">^13</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s1">temperatura_interm</span><span class="s2">:</span><span class="s5">^6</span><span class="s2">} </span><span class="s5">|&quot;</span><span class="s3">)</span>
+<span class="s1">print</span><span class="s3">(</span><span class="s5">f&quot;| Temperatura externa da nave       | </span><span class="s2">{</span><span class="s1">temperatura_externa</span><span class="s2">:</span><span class="s5">^12</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s5">'-10°C'</span><span class="s2">:</span><span class="s5">^13</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s1">temperatura_externam</span><span class="s2">:</span><span class="s5">^6</span><span class="s2">} </span><span class="s5">|&quot;</span><span class="s3">)</span>
+<span class="s1">print</span><span class="s3">(</span><span class="s5">f&quot;| Energia total da nave             | </span><span class="s2">{</span><span class="s1">energia</span><span class="s2">:</span><span class="s5">^12</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s5">'60%'</span><span class="s2">:</span><span class="s5">^13</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s1">energiam</span><span class="s2">:</span><span class="s5">^6</span><span class="s2">} </span><span class="s5">|&quot;</span><span class="s3">)</span>
+<span class="s1">print</span><span class="s3">(</span><span class="s5">f&quot;| Pressão do tanque da nave         | </span><span class="s2">{</span><span class="s1">pressao_tanque</span><span class="s2">:</span><span class="s5">^12</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s5">'40'</span><span class="s2">:</span><span class="s5">^13</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s1">pressao_tanquem</span><span class="s2">:</span><span class="s5">^6</span><span class="s2">} </span><span class="s5">|&quot;</span><span class="s3">)</span>
+<span class="s1">print</span><span class="s3">(</span><span class="s5">f&quot;| Integridade estrutural da nave    | </span><span class="s2">{</span><span class="s1">integridade_estrutural</span><span class="s2">:</span><span class="s5">^12</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s5">'1'</span><span class="s2">:</span><span class="s5">^13</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s1">integridade_estruturalm</span><span class="s2">:</span><span class="s5">^6</span><span class="s2">} </span><span class="s5">|&quot;</span><span class="s3">)</span>
+<span class="s1">print</span><span class="s3">(</span><span class="s5">f&quot;| Módulos críticos da nave          | </span><span class="s2">{</span><span class="s1">modulos_criticos</span><span class="s2">:</span><span class="s5">^12</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s5">'1'</span><span class="s2">:</span><span class="s5">^13</span><span class="s2">} </span><span class="s5">| </span><span class="s2">{</span><span class="s1">modulos_criticosm</span><span class="s2">:</span><span class="s5">^6</span><span class="s2">} </span><span class="s5">|&quot;</span><span class="s3">)</span>
+
+<span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;</span><span class="s2">\n</span><span class="s5">---------------------------------------------------------------------</span><span class="s2">\n</span><span class="s5">&quot;</span><span class="s3">)</span>
+
+
+
+<span class="s0">#logica Booleana onde define se os status do foguete estao todos aptos para ser lançado!</span>
+<span class="s0">#caso um dos elementos esteja a baixo do necessario, o lançamento não vai acontecer</span>
+
+
+<span class="s2">if </span><span class="s3">(</span><span class="s4">18 </span><span class="s3">&lt;= </span><span class="s1">temperatura_interna </span><span class="s3">&lt;= </span><span class="s4">30 </span><span class="s2">and</span>
+    <span class="s3">-</span><span class="s4">10 </span><span class="s3">&lt;= </span><span class="s1">temperatura_externa </span><span class="s3">&lt;= </span><span class="s4">35 </span><span class="s2">and</span>
+    <span class="s4">60 </span><span class="s3">&lt;= </span><span class="s1">energia </span><span class="s3">&lt;= </span><span class="s4">100 </span><span class="s2">and</span>
+    <span class="s4">40 </span><span class="s3">&lt;= </span><span class="s1">pressao_tanque </span><span class="s3">&lt;=</span><span class="s4">60 </span><span class="s2">and</span>
+    <span class="s1">integridade_estrutural </span><span class="s3">&lt;= </span><span class="s4">1 </span><span class="s2">and</span>
+    <span class="s1">modulos_criticos </span><span class="s3">&lt;= </span><span class="s4">1</span><span class="s3">):</span>
+    <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;&quot;&quot;    Integridade estrutural do foguete = OK     ⠀                          ⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀    Modulo Critico do foguete = OK                                       ⢸⣿⣿⣶⣦⣄⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀    Temperatura interna = OK                                            ⢈⣿⣿⣿⣿⣿⣿⣾⡄⠀⠀⠀⠀⣼⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀   Temperatura externa = OK                                             ⠙⢿⣿⣿⡟⠛⠛⠿⡄⠀⠀⢰⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀   Pressão do tanque = OK                                                   ⠙⢿⣧⠀⠀⠀⠀⠀⣠⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀Energia = OK                                                             ⠉⠂⠀⢀⣴⣿⣿⣌⠛⠿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀                                                                             ⢀⣠⣼⠻⣿⣿⣿⣷⣤⡈⠻⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀   --------------------------------------------                           ⢠⣴⣶⣿⣿⣿⣿⣦⡘⢿⣿⣿⣿⣿⣦⣄⢸⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀ |  O FOGUETE ESTA PRONTO PARA DECOLAGEM!  |                               ⠙⢿⣿⣿⣿⣿⣿⣿⣄⠙⣿⣿⣿⣿⣿⣿⠿⠛⠂⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀ --------------------------------------------                               ⠀⠙⠿⠿⠿⠿⠿⠛⠓⠈⠻⣿⡿⠋⠀⢴⠆⠉⠉⣀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                            ⠀⠀⠈⠻⣿⡿⠁⢼⠇⠀⠰⡷⠄⠉⢁⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                               ⠈⠃⢰⡄⠀⠿⠂⣠⣶⣿⣿⣇⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                                  ⠈⠀⠲⠀⢰⣿⣿⣿⣿⣿⣆⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                                  ⠀⠉⠛⠿⣿⣿⣿⣿⡀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                                  ⠀⠀⠀⠈⠉⠛⠃&quot;&quot;&quot;</span><span class="s3">)</span>
+
+
+
+
+<span class="s2">else</span><span class="s3">: </span><span class="s0">#OK significa pronto N/G significa No Good.</span>
+    <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;&quot;&quot; 
+    Integridade estrutural do foguete = N/G 
+    Modulo Critico do foguete = N/G 
+    Temperatura interna = N/G 
+    Temperatura externa = N/G 
+    Pressão do tanque =N/G 
+    Energia = N/G 
+    ------------------------------------------------ 
+    |  O FOGUETE NÃO ESTA APTO PARA DECOLAR!  | 
+    ------------------------------------------------ 
+    &quot;&quot;&quot;</span><span class="s3">)</span>
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
